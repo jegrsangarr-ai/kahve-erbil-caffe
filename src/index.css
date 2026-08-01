@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+:root {
+  --gold: #c5a059;
+  --dark-bg: #0a0a0a;
+  --card-bg: #151515;
+  --text-muted: #888888;
+}
+
+@layer utilities {
+  .font-poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+  .font-cairo {
+    font-family: 'Vazirmatn', 'Cairo', sans-serif;
+  }
+  .font-kurdish {
+    font-family: 'Vazirmatn', 'Cairo', sans-serif;
+  }
+}
+
+body {
+  font-family: 'Poppins', 'Vazirmatn', sans-serif;
+  background-color: var(--dark-bg);
+  color: #ffffff;
+}
+
+/* Custom Leader Dots styling for Menu Items */
+.menu-dots {
+  flex-grow: 1;
+  border-bottom: 1px dotted rgba(197, 160, 89, 0.4);
+  margin: 0 0.75rem;
+  align-self: baseline;
+  position: relative;
+  bottom: 0.3em;
+  transition: border-color 0.2s ease;
+}
+
+.menu-item-row:hover .menu-dots {
+  border-bottom-color: rgba(197, 160, 89, 0.9);
+}
+
+/* Custom dark scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c5a059;
+}
+

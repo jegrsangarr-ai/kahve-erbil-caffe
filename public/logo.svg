@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <!-- Curved paths for text inside the burgundy ring -->
+    <path id="arcTop" d="M 100,300 A 200,200 0 1,1 500,300" fill="none"/>
+    <path id="arcBottom" d="M 500,300 A 200,200 0 0,1 100,300" fill="none"/>
+  </defs>
+
+  <!-- Transparent Background (No black rect) -->
+
+  <!-- Outer Yellow Border -->
+  <circle cx="300" cy="300" r="282" fill="none" stroke="#f2c029" stroke-width="26" />
+
+  <!-- Burgundy / Maroon Outer Ring -->
+  <circle cx="300" cy="300" r="269" fill="#6b1a2b" />
+
+  <!-- Inner Yellow Ring Accent Border -->
+  <circle cx="300" cy="300" r="162" fill="none" stroke="#f2c029" stroke-width="7" />
+
+  <!-- Dark Slate Teal Center Circle -->
+  <circle cx="300" cy="300" r="158" fill="#4a7271" />
+
+  <!-- Left & Right Notch Lines (9 o'clock and 3 o'clock) -->
+  <line x1="31" y1="300" x2="88" y2="300" stroke="#f2c029" stroke-width="12" stroke-linecap="butt" />
+  <line x1="512" y1="300" x2="569" y2="300" stroke="#f2c029" stroke-width="12" stroke-linecap="butt" />
+
+  <!-- Top Curved Text: K A H V E -->
+  <text fill="#f2c029" font-weight="900" font-size="54" letter-spacing="14" font-family="'Poppins', 'Montserrat', 'Arial', sans-serif">
+    <textPath href="#arcTop" startOffset="50%" text-anchor="middle">
+      KAHVE
+    </textPath>
+  </text>
+
+  <!-- Bottom Curved Text: E R B I L -->
+  <text fill="#f2c029" font-weight="900" font-size="52" letter-spacing="14" font-family="'Poppins', 'Montserrat', 'Arial', sans-serif">
+    <textPath href="#arcBottom" startOffset="50%" text-anchor="middle">
+      ERBIL
+    </textPath>
+  </text>
+
+  <!-- Triple Coffee Bean Triskelion Center Symbol (Yellow) -->
+  <g transform="translate(300, 300) scale(2.05)">
+    <!-- Top Bean -->
+    <path d="M -5,-52 C -32,-38 -38,-10 -18,12 C -6,25 14,18 16,0 C 18,-20 6,-42 -5,-52 Z" fill="#f2c029" />
+    <path d="M -18,-42 Q -8,-15 0,5" fill="none" stroke="#4a7271" stroke-width="3" stroke-linecap="round" />
+
+    <!-- Right Bean -->
+    <path d="M 5,-52 C 32,-38 38,-10 18,12 C 6,25 -14,18 -16,0 C -18,-20 -6,-42 5,-52 Z" fill="#f2c029" />
+    <path d="M 18,-42 Q 8,-15 0,5" fill="none" stroke="#4a7271" stroke-width="3" stroke-linecap="round" />
+
+    <!-- Bottom Bean -->
+    <path d="M -22,15 C -25,44 0,50 22,44 C 34,26 22,6 0,4 C -16,2 -20,2 -22,15 Z" fill="#f2c029" />
+    <path d="M -12,22 Q 0,28 12,30" fill="none" stroke="#4a7271" stroke-width="3" stroke-linecap="round" />
+  </g>
+</svg>

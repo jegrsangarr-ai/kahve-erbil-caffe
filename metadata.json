@@ -1,0 +1,6 @@
+{
+  "name": "Kahve Erbil Cafe Menu",
+  "description": "Responsive, elegant digital menu for Kahve Erbil featuring full English and Kurdish bilingual items, prices, category filter, and search.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
