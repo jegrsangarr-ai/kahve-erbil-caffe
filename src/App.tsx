@@ -7,6 +7,7 @@ import { MenuItemRow } from './components/MenuItemRow';
 import { MenuItemCard } from './components/MenuItemCard';
 import { Footer } from './components/Footer';
 import { Coffee, Search } from 'lucide-react';
+import { LanguageMode } from './types';
 
 export default function App() {
   const [activeCategory, setActiveCategory] = useState<string>('all');
@@ -14,7 +15,7 @@ export default function App() {
   const [showPopularOnly, setShowPopularOnly] = useState<boolean>(false);
   const [sortBy, setSortBy] = useState<'default' | 'price-asc' | 'price-desc'>('default');
   const [viewMode, setViewMode] = useState<'classic' | 'grid'>('classic');
-  const [langMode, setLangMode] = useState<'bilingual' | 'en' | 'ku'>('bilingual');
+  const [langMode, setLangMode] = useState<LanguageMode>('all');
 
   // Compute item counts per category
   const categoryCounts = useMemo(() => {
@@ -43,9 +44,10 @@ export default function App() {
         const q = searchQuery.toLowerCase().trim();
         const matchesEn = item.nameEn.toLowerCase().includes(q);
         const matchesKu = item.nameKu.toLowerCase().includes(q);
+        const matchesAr = item.nameAr.toLowerCase().includes(q);
         const matchesPrice = item.priceFormatted.toLowerCase().includes(q) || item.priceAmount.toString().includes(q);
         const matchesCat = item.categoryId.toLowerCase().includes(q);
-        return matchesEn || matchesKu || matchesPrice || matchesCat;
+        return matchesEn || matchesKu || matchesAr || matchesPrice || matchesCat;
       }
 
       return true;
@@ -86,6 +88,7 @@ export default function App() {
         onSelectCategory={setActiveCategory}
         categoryItemCounts={categoryCounts}
         totalItemCount={MENU_ITEMS.length}
+        langMode={langMode}
       />
 
       {/* Search & Secondary Filters */}
@@ -106,7 +109,7 @@ export default function App() {
             <Search className="w-12 h-12 text-[#c5a059]/60 mx-auto mb-4" />
             <h3 className="text-lg font-bold text-white mb-2 uppercase tracking-wider">No menu items found</h3>
             <p className="text-xs text-zinc-400 mb-6">
-              We couldn't find any drinks matching "{searchQuery}". Try searching for another keyword like "Espresso", "Mojito", or "فراوڵە".
+              We couldn't find any drinks matching "{searchQuery}". Try searching for another keyword like "Espresso", "قهوة", "موهيتو", or "فراوڵە".
             </p>
             <button
               onClick={() => {
@@ -114,7 +117,7 @@ export default function App() {
                 setShowPopularOnly(false);
                 setActiveCategory('all');
               }}
-              className="bg-[#c5a059] text-black font-bold px-5 py-2.5 rounded-full shadow-lg shadow-[#c5a059]/20 hover:bg-[#b58f48] transition-all text-xs uppercase tracking-wider"
+              className="bg-[#c5a059] text-black font-bold px-5 py-2.5 rounded-full shadow-lg shadow-[#c5a059]/20 hover:bg-[#b58f48] transition-all text-xs uppercase tracking-wider cursor-pointer"
             >
               Reset All Filters
             </button>
@@ -131,18 +134,55 @@ export default function App() {
                     </span>
                     <div>
                       <div className="flex items-center gap-3">
-                        <h2 className="text-xl sm:text-2xl font-light text-white tracking-[2px] uppercase">
-                          {category.nameEn}
-                        </h2>
-                        <span dir="rtl" className="text-lg sm:text-xl font-bold text-[#c5a059] font-cairo">
-                          {category.nameKu}
-                        </span>
+                        {langMode === 'ar' ? (
+                          <h2 dir="rtl" className="text-xl sm:text-2xl font-bold text-[#c5a059] font-cairo">
+                            {category.nameAr}
+                          </h2>
+                        ) : langMode === 'ku' ? (
+                          <h2 dir="rtl" className="text-xl sm:text-2xl font-bold text-[#c5a059] font-cairo">
+                            {category.nameKu}
+                          </h2>
+                        ) : langMode === 'en' ? (
+                          <h2 className="text-xl sm:text-2xl font-light text-white tracking-[2px] uppercase">
+                            {category.nameEn}
+                          </h2>
+                        ) : (
+                          <>
+                            <h2 className="text-xl sm:text-2xl font-light text-white tracking-[2px] uppercase">
+                              {category.nameEn}
+                            </h2>
+                            <span dir="rtl" className="text-lg sm:text-xl font-bold text-[#c5a059] font-cairo">
+                              {category.nameKu}
+                            </span>
+                            <span dir="rtl" className="text-base sm:text-lg font-bold text-zinc-400 font-cairo">
+                              • {category.nameAr}
+                            </span>
+                          </>
+                        )}
                       </div>
-                      <p className="text-xs text-zinc-400 mt-0.5">
-                        {category.descriptionEn} •{' '}
-                        <span dir="rtl" className="font-cairo text-zinc-400">
-                          {category.descriptionKu}
-                        </span>
+
+                      <p className="text-xs text-zinc-400 mt-1">
+                        {langMode === 'ar' ? (
+                          <span dir="rtl" className="font-cairo text-zinc-300">
+                            {category.descriptionAr}
+                          </span>
+                        ) : langMode === 'ku' ? (
+                          <span dir="rtl" className="font-cairo text-zinc-300">
+                            {category.descriptionKu}
+                          </span>
+                        ) : langMode === 'en' ? (
+                          <span>{category.descriptionEn}</span>
+                        ) : (
+                          <>
+                            <span>{category.descriptionEn}</span> •{' '}
+                            <span dir="rtl" className="font-cairo text-zinc-400">
+                              {category.descriptionKu}
+                            </span> •{' '}
+                            <span dir="rtl" className="font-cairo text-zinc-400">
+                              {category.descriptionAr}
+                            </span>
+                          </>
+                        )}
                       </p>
                     </div>
                   </div>

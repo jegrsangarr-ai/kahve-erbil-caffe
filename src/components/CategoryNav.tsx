@@ -1,5 +1,5 @@
 import React from 'react';
-import { MenuCategory } from '../types';
+import { MenuCategory, LanguageMode } from '../types';
 import {
   GlassWater,
   CupSoda,
@@ -21,6 +21,7 @@ interface CategoryNavProps {
   onSelectCategory: (id: string) => void;
   categoryItemCounts: Record<string, number>;
   totalItemCount: number;
+  langMode?: LanguageMode;
 }
 
 // Icon mapping helper
@@ -59,6 +60,7 @@ export const CategoryNav: React.FC<CategoryNavProps> = ({
   onSelectCategory,
   categoryItemCounts,
   totalItemCount,
+  langMode = 'all',
 }) => {
   return (
     <div className="sticky top-0 z-30 bg-[#0c0c0c]/95 backdrop-blur-md border-b border-white/5 py-3 px-4 shadow-xl">
@@ -67,7 +69,7 @@ export const CategoryNav: React.FC<CategoryNavProps> = ({
           {/* ALL Category Button */}
           <button
             onClick={() => onSelectCategory('all')}
-            className={`flex-shrink-0 flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 border ${
+            className={`flex-shrink-0 flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 border cursor-pointer ${
               activeCategoryId === 'all'
                 ? 'bg-[#c5a059] text-black border-[#c5a059] shadow-[0_0_15px_rgba(197,160,89,0.4)] font-bold'
                 : 'bg-transparent text-[#888888] border-[#c5a059]/30 hover:border-[#c5a059]/60 hover:text-white'
@@ -75,10 +77,20 @@ export const CategoryNav: React.FC<CategoryNavProps> = ({
           >
             <Layers className="w-3.5 h-3.5" />
             <div className="flex items-center gap-1.5">
-              <span>All</span>
-              <span className="font-cairo text-xs font-bold" dir="rtl">
-                (هەمووی)
-              </span>
+              {langMode === 'ar' ? (
+                <span className="font-cairo text-xs font-bold" dir="rtl">الكل</span>
+              ) : langMode === 'ku' ? (
+                <span className="font-cairo text-xs font-bold" dir="rtl">هەمووی</span>
+              ) : langMode === 'en' ? (
+                <span>All</span>
+              ) : (
+                <>
+                  <span>All</span>
+                  <span className="font-cairo text-[11px] opacity-80" dir="rtl">
+                    (هەمووی • الكل)
+                  </span>
+                </>
+              )}
             </div>
             <span
               className={`text-[10px] px-1.5 py-0.2 rounded-full font-bold ${
@@ -100,7 +112,7 @@ export const CategoryNav: React.FC<CategoryNavProps> = ({
               <button
                 key={category.id}
                 onClick={() => onSelectCategory(category.id)}
-                className={`flex-shrink-0 flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 border ${
+                className={`flex-shrink-0 flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 border cursor-pointer ${
                   isActive
                     ? 'bg-[#c5a059] text-black border-[#c5a059] shadow-[0_0_15px_rgba(197,160,89,0.4)] font-bold'
                     : 'bg-transparent text-[#888888] border-[#c5a059]/30 hover:border-[#c5a059]/60 hover:text-white'
@@ -112,10 +124,24 @@ export const CategoryNav: React.FC<CategoryNavProps> = ({
                 )}
 
                 <div className="flex items-center gap-1.5 whitespace-nowrap">
-                  <span>{category.nameEn}</span>
-                  <span className="font-cairo text-xs opacity-90" dir="rtl">
-                    {category.nameKu}
-                  </span>
+                  {langMode === 'ar' ? (
+                    <span className="font-cairo text-xs font-semibold" dir="rtl">
+                      {category.nameAr}
+                    </span>
+                  ) : langMode === 'ku' ? (
+                    <span className="font-cairo text-xs font-semibold" dir="rtl">
+                      {category.nameKu}
+                    </span>
+                  ) : langMode === 'en' ? (
+                    <span>{category.nameEn}</span>
+                  ) : (
+                    <>
+                      <span>{category.nameEn}</span>
+                      <span className="font-cairo text-xs opacity-90" dir="rtl">
+                        {category.nameKu}
+                      </span>
+                    </>
+                  )}
                 </div>
 
                 <span

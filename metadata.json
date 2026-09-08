@@ -1,6 +1,6 @@
 {
   "name": "EBL KAHVE Menu",
-  "description": "Responsive, elegant digital menu for EBL KAHVE featuring full English and Kurdish bilingual items, prices, category filter, and search.",
+  "description": "Responsive, elegant digital menu for EBL KAHVE featuring English, Kurdish, and Arabic trilingual items, prices, category filter, and search.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
