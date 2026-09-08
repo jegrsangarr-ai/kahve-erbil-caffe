@@ -47,17 +47,17 @@ export const KahveErbilLogo: React.FC<LogoProps> = ({ className = '', size = 120
             <line x1="25" y1="100" x2="38" y2="100" stroke="#f2c029" strokeWidth="3" strokeLinecap="square" />
             <line x1="162" y1="100" x2="175" y2="100" stroke="#f2c029" strokeWidth="3" strokeLinecap="square" />
 
-            {/* Top Text: K A H V E */}
+            {/* Top Text: E B L */}
             <text fill="#f2c029" fontWeight="900" fontSize="17" letterSpacing="4" fontFamily="Poppins, sans-serif">
               <textPath href="#textArcTop" startOffset="50%" textAnchor="middle">
-                KAHVE
+                EBL
               </textPath>
             </text>
 
-            {/* Bottom Text: E R B I L */}
+            {/* Bottom Text: K A H V E */}
             <text fill="#f2c029" fontWeight="900" fontSize="16" letterSpacing="4" fontFamily="Poppins, sans-serif">
               <textPath href="#textArcBottom" startOffset="50%" textAnchor="middle">
-                ERBIL
+                KAHVE
               </textPath>
             </text>
 
@@ -76,7 +76,7 @@ export const KahveErbilLogo: React.FC<LogoProps> = ({ className = '', size = 120
 
       {showTextBelow && (
         <div className="text-center mt-3">
-          <h1 className="text-2xl font-light tracking-widest text-[#c5a059] font-poppins uppercase">KAHVE ERBIL</h1>
+          <h1 className="text-2xl font-light tracking-widest text-[#c5a059] font-poppins uppercase">EBL KAHVE</h1>
           <p className="text-sm font-semibold text-zinc-400 font-cairo" dir="rtl">ئێبڵ كاهڤى</p>
         </div>
       )}

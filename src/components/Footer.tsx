@@ -17,9 +17,9 @@ export const Footer: React.FC<FooterProps> = ({ onSelectCategory }) => {
           <div className="flex items-center gap-3">
             <KahveErbilLogo size={60} />
             <div>
-              <h3 className="font-poppins font-light text-white text-base uppercase tracking-widest">KAHVE ERBIL</h3>
+              <h3 className="font-poppins font-light text-white text-base uppercase tracking-widest">EBL KAHVE</h3>
               <p className="font-cairo font-bold text-[#c5a059] text-xs" dir="rtl">
-                ئێربیل کاهڤی
+                ئێبڵ كاهڤى
               </p>
             </div>
           </div>

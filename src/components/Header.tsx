@@ -124,10 +124,10 @@ export const Header: React.FC<HeaderProps> = ({
                 <span>PREMIUM COFFEE ROASTERS</span>
               </div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-light tracking-[4px] text-white uppercase font-poppins">
-                KAHVE <span className="text-[#c5a059] font-medium">ERBIL</span>
+                EBL <span className="text-[#c5a059] font-medium">KAHVE</span>
               </h1>
               <p className="text-lg sm:text-xl font-bold text-[#c5a059] font-cairo tracking-wide opacity-90" dir="rtl">
-                ئێربیل کاهڤی
+                ئێبڵ كاهڤى
               </p>
               
               {/* Prominent Physical Location */}
