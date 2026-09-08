@@ -1,6 +1,6 @@
 import React from 'react';
 import { KahveErbilLogo } from './KahveErbilLogo';
-import { ShoppingBag, MapPin, Sparkles, ExternalLink } from 'lucide-react';
+import { ShoppingBag, MapPin, Sparkles, ExternalLink, LayoutGrid, List } from 'lucide-react';
 
 interface HeaderProps {
   viewMode?: 'classic' | 'grid';
@@ -42,6 +42,75 @@ export const Header: React.FC<HeaderProps> = ({
 
           {/* Quick controls: View mode & Language selector */}
           <div className="flex items-center gap-2 ml-auto">
+            {/* Language Selector */}
+            <div className="inline-flex items-center bg-[#151515] border border-[#c5a059]/30 rounded-full p-0.5 text-[11px]">
+              <button
+                type="button"
+                onClick={() => setLangMode('bilingual')}
+                className={`px-2 py-0.5 rounded-full transition-colors ${
+                  langMode === 'bilingual'
+                    ? 'bg-[#c5a059] text-black font-semibold'
+                    : 'text-zinc-400 hover:text-white'
+                }`}
+                title="Bilingual (English & Kurdish)"
+              >
+                All
+              </button>
+              <button
+                type="button"
+                onClick={() => setLangMode('en')}
+                className={`px-2 py-0.5 rounded-full transition-colors ${
+                  langMode === 'en'
+                    ? 'bg-[#c5a059] text-black font-semibold'
+                    : 'text-zinc-400 hover:text-white'
+                }`}
+                title="English only"
+              >
+                EN
+              </button>
+              <button
+                type="button"
+                onClick={() => setLangMode('ku')}
+                className={`px-2 py-0.5 rounded-full font-cairo transition-colors ${
+                  langMode === 'ku'
+                    ? 'bg-[#c5a059] text-black font-semibold'
+                    : 'text-zinc-400 hover:text-white'
+                }`}
+                title="Kurdish only"
+              >
+                کوردی
+              </button>
+            </div>
+
+            {/* View Mode Toggle */}
+            {setViewMode && (
+              <div className="inline-flex items-center bg-[#151515] border border-[#c5a059]/30 rounded-full p-0.5 text-[11px]">
+                <button
+                  type="button"
+                  onClick={() => setViewMode('classic')}
+                  className={`p-1 rounded-full transition-colors ${
+                    viewMode === 'classic'
+                      ? 'bg-[#c5a059] text-black'
+                      : 'text-zinc-400 hover:text-white'
+                  }`}
+                  title="Classic List View"
+                >
+                  <List className="w-3.5 h-3.5" />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setViewMode('grid')}
+                  className={`p-1 rounded-full transition-colors ${
+                    viewMode === 'grid'
+                      ? 'bg-[#c5a059] text-black'
+                      : 'text-zinc-400 hover:text-white'
+                  }`}
+                  title="Grid Card View"
+                >
+                  <LayoutGrid className="w-3.5 h-3.5" />
+                </button>
+              </div>
+            )}
           </div>
         </div>
 

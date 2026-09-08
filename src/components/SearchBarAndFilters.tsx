@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, X, ArrowUpDown } from 'lucide-react';
+import { Search, X, ArrowUpDown, Flame } from 'lucide-react';
 
 interface SearchBarProps {
   searchQuery: string;
@@ -47,6 +47,22 @@ export const SearchBarAndFilters: React.FC<SearchBarProps> = ({
 
         {/* Filter Badges & Sorting */}
         <div className="flex items-center gap-3 w-full md:w-auto justify-between md:justify-end overflow-x-auto no-scrollbar">
+          {/* Popular Items Toggle */}
+          {setShowPopularOnly && (
+            <button
+              type="button"
+              onClick={() => setShowPopularOnly(!showPopularOnly)}
+              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border transition-all cursor-pointer ${
+                showPopularOnly
+                  ? 'bg-[#c5a059] text-black border-[#c5a059] shadow-[0_0_10px_rgba(197,160,89,0.3)]'
+                  : 'bg-[#151515] text-zinc-400 border-[#c5a059]/30 hover:text-white hover:border-[#c5a059]/60'
+              }`}
+            >
+              <Flame className={`w-3.5 h-3.5 ${showPopularOnly ? 'fill-black text-black' : 'text-[#c5a059]'}`} />
+              <span className="uppercase tracking-wider text-[11px]">Popular</span>
+            </button>
+          )}
+
           {/* Sort Dropdown */}
           <div className="inline-flex items-center gap-2 bg-[#151515] rounded-full px-3.5 py-1.5 border border-[#c5a059]/30 text-xs text-zinc-300">
             <ArrowUpDown className="w-3.5 h-3.5 text-[#c5a059]" />

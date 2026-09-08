@@ -2,46 +2,6 @@ import { MenuCategory, MenuItem } from '../types';
 
 export const CATEGORIES: MenuCategory[] = [
   {
-    id: 'smoothies',
-    nameEn: 'Smoothies',
-    nameKu: 'سمۆزی',
-    iconName: 'GlassWater',
-    descriptionEn: 'Fresh blended fruit smoothies with vibrant natural flavors',
-    descriptionKu: 'سمۆزی میوەی تازەی دروستکراو بە تام و بۆنی سروشتی'
-  },
-  {
-    id: 'iced-tea',
-    nameEn: 'Iced Tea',
-    nameKu: 'چای سارد',
-    iconName: 'CupSoda',
-    descriptionEn: 'Refreshing chilled teas infused with fruit extracts',
-    descriptionKu: 'چای ساردی بەخشندەی تژى لە تامی میوەکان'
-  },
-  {
-    id: 'juice',
-    nameEn: 'Juice',
-    nameKu: 'شەربەت',
-    iconName: 'Citrus',
-    descriptionEn: '100% natural cold pressed and handcrafted juices',
-    descriptionKu: 'شەربەتی سروشتی و تازەی بەدەست دروستکراو'
-  },
-  {
-    id: 'refreshments',
-    nameEn: 'Refreshments',
-    nameKu: 'ریفریشمێنتس',
-    iconName: 'Sparkles',
-    descriptionEn: 'Handcrafted signature mojitos and sparkling coolers',
-    descriptionKu: 'موهێتۆ و خواردنەوە فێنککەرەوە تایبەتەکان'
-  },
-  {
-    id: 'cold-drinks',
-    nameEn: 'Cold Drinks',
-    nameKu: 'خواردنەوە ساردەکان',
-    iconName: 'Zap',
-    descriptionEn: 'Energy boosters and iced beverage combinations',
-    descriptionKu: 'خواردنەوەی وزەبەخش و ژەمە ساردەکان'
-  },
-  {
     id: 'hot-coffee',
     nameEn: 'Hot Coffee',
     nameKu: 'قاوەی گەرم',
@@ -88,6 +48,46 @@ export const CATEGORIES: MenuCategory[] = [
     iconName: 'Snowflake',
     descriptionEn: 'Greek style ice-shaken coffee specialties',
     descriptionKu: 'قاوەی فێنکی شەکەنکراوی فرێدۆ'
+  },
+  {
+    id: 'smoothies',
+    nameEn: 'Smoothies',
+    nameKu: 'سمۆزی',
+    iconName: 'GlassWater',
+    descriptionEn: 'Fresh blended fruit smoothies with vibrant natural flavors',
+    descriptionKu: 'سمۆزی میوەی تازەی دروستکراو بە تام و بۆنی سروشتی'
+  },
+  {
+    id: 'iced-tea',
+    nameEn: 'Iced Tea',
+    nameKu: 'چای سارد',
+    iconName: 'CupSoda',
+    descriptionEn: 'Refreshing chilled teas infused with fruit extracts',
+    descriptionKu: 'چای ساردی بەخشندەی تژى لە تامی میوەکان'
+  },
+  {
+    id: 'juice',
+    nameEn: 'Juice',
+    nameKu: 'شەربەت',
+    iconName: 'Citrus',
+    descriptionEn: '100% natural cold pressed and handcrafted juices',
+    descriptionKu: 'شەربەتی سروشتی و تازەی بەدەست دروستکراو'
+  },
+  {
+    id: 'refreshments',
+    nameEn: 'Refreshments',
+    nameKu: 'ریفریشمێنتس',
+    iconName: 'Sparkles',
+    descriptionEn: 'Handcrafted signature mojitos and sparkling coolers',
+    descriptionKu: 'موهێتۆ و خواردنەوە فێنککەرەوە تایبەتەکان'
+  },
+  {
+    id: 'cold-drinks',
+    nameEn: 'Cold Drinks',
+    nameKu: 'خواردنەوە ساردەکان',
+    iconName: 'Zap',
+    descriptionEn: 'Energy boosters and iced beverage combinations',
+    descriptionKu: 'خواردنەوەی وزەبەخش و ژەمە ساردەکان'
   }
 ];
 
@@ -211,3 +211,4 @@ export const MENU_ITEMS: MenuItem[] = [
   { id: 'fr-1', categoryId: 'freddo', nameEn: 'FREDDO ESPRESSO', nameKu: 'فرێدۆی ئیسپریسۆ', priceAmount: 6000, priceFormatted: '6.000 IQD', popular: true },
   { id: 'fr-2', categoryId: 'freddo', nameEn: 'FREDDO CAPPUCCINO', nameKu: 'فرێدۆی کاپوچینۆ', priceAmount: 6000, priceFormatted: '6.000 IQD', popular: true }
 ];
+
