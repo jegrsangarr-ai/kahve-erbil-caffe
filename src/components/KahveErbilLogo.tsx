@@ -7,21 +7,22 @@ interface LogoProps {
   showTextBelow?: boolean;
 }
 
-export const KahveErbilLogo: React.FC<LogoProps> = ({ className = '', size = 120, showTextBelow = false }) => {
+export const KahveErbilLogo: React.FC<LogoProps> = ({ className = '', size = 160, showTextBelow = false }) => {
   const [imgError, setImgError] = useState(false);
 
   return (
     <div className={`inline-flex flex-col items-center justify-center ${className}`}>
       <div 
-        className="relative flex items-center justify-center rounded-full shadow-[0_0_25px_rgba(197,160,89,0.4)] border-2 border-[#c5a059] ring-2 ring-[#a3e635]/50 p-1 bg-transparent transition-transform duration-300 hover:scale-105 overflow-hidden"
+        className="relative flex items-center justify-center rounded-full shadow-[0_0_30px_rgba(197,160,89,0.45)] border-2 border-[#c5a059] ring-2 ring-[#a3e635]/50 bg-transparent transition-transform duration-300 hover:scale-105 overflow-hidden flex-shrink-0"
         style={{ width: size, height: size }}
       >
         {!imgError ? (
           <img 
             src={logoImg} 
-            alt="Kahve Erbil Logo" 
+            alt="EBL KAHVE Logo" 
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover rounded-full"
+            style={{ width: '100%', height: '100%', maxWidth: '100%' }}
             onError={() => setImgError(true)}
           />
         ) : (

@@ -129,8 +129,8 @@ export const Header: React.FC<HeaderProps> = ({
 
         {/* Brand Center Header */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 my-2 text-center md:text-left">
-          <div className="flex flex-col sm:flex-row items-center gap-5">
-            <KahveErbilLogo size={110} />
+          <div className="flex flex-col sm:flex-row items-center gap-6">
+            <KahveErbilLogo size={160} />
             <div className="space-y-1.5">
               <div className="inline-flex items-center gap-2 bg-[#151515] border border-[#c5a059]/30 px-3 py-0.5 rounded-full text-[11px] font-semibold text-[#c5a059] uppercase tracking-widest">
                 <Sparkles className="w-3 h-3 text-[#c5a059]" />
