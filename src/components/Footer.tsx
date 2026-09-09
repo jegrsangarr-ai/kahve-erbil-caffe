@@ -19,7 +19,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectCategory }) => {
             <div>
               <h3 className="font-poppins font-light text-white text-base uppercase tracking-widest">EBL KAHVE</h3>
               <p className="font-cairo font-bold text-[#c5a059] text-xs" dir="rtl">
-                ئێبڵ كاهڤى <span className="text-zinc-500 font-normal px-1">•</span> إيبل كافيه
+                ئێبڵ كاهڤى <span className="text-zinc-500 font-normal px-1">•</span> إبل قهوة
               </p>
             </div>
           </div>
@@ -88,7 +88,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectCategory }) => {
       </div>
 
       <div className="max-w-7xl mx-auto pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
-        <p>© {new Date().getFullYear()} EBL KAHVE (ئێبڵ كاهڤى • إيبل كافيه). All rights reserved.</p>
+        <p>© {new Date().getFullYear()} EBL KAHVE (ئێبڵ كاهڤى • إبل قهوة). All rights reserved.</p>
         <p className="flex items-center gap-1">
           Made with <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500" /> for coffee lovers in Erbil
         </p>

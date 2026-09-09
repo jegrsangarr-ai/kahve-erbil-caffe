@@ -142,11 +142,11 @@ export const Header: React.FC<HeaderProps> = ({
               {langMode !== 'en' && (
                 <p className="text-lg sm:text-xl font-bold text-[#c5a059] font-cairo tracking-wide opacity-90" dir="rtl">
                   {langMode === 'ar' ? (
-                    'إيبل كافيه'
+                    'إبل قهوة'
                   ) : langMode === 'ku' ? (
                     'ئێبڵ كاهڤى'
                   ) : (
-                    <span>ئێبڵ كاهڤى <span className="text-zinc-500 font-normal px-1.5">•</span> إيبل كافيه</span>
+                    <span>ئێبڵ كاهڤى <span className="text-zinc-500 font-normal px-1.5">•</span> إبل قهوة</span>
                   )}
                 </p>
               )}
