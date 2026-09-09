@@ -18,7 +18,7 @@ export const MenuItemCard: React.FC<MenuItemCardProps> = ({
         <div className="absolute top-3 right-3 bg-[#c5a059] text-black text-[9px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 shadow-md uppercase tracking-wider">
           <Flame className="w-2.5 h-2.5 fill-black" />
           <span>
-            {langMode === 'ku' ? 'باو' : langMode === 'ar' ? 'شائع' : 'BESTSELLER'}
+            {langMode === 'ku' ? 'باو' : langMode === 'ar' ? 'الأكثر طلباً' : 'BESTSELLER'}
           </span>
         </div>
       )}

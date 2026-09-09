@@ -5,11 +5,11 @@ export const CATEGORIES: MenuCategory[] = [
     id: 'hot-coffee',
     nameEn: 'Hot Coffee',
     nameKu: 'قاوەی گەرم',
-    nameAr: 'قهوة ساخنة',
+    nameAr: 'قهوة حارة',
     iconName: 'Coffee',
     descriptionEn: 'Premium roasted espresso, traditional Turkish, and specialty brews',
     descriptionKu: 'قاوەی برژاوی زۆر باش، تورکی کەلەپووری و تایبەت',
-    descriptionAr: 'إسبريسو فاخر، قهوة تركية تقليدية ومشروبات ساخنة مميزة'
+    descriptionAr: 'إسبريسو فاخر، قهوة تركية أصلية ومشروبات حارة مميزة'
   },
   {
     id: 'iced-coffee',
@@ -19,7 +19,7 @@ export const CATEGORIES: MenuCategory[] = [
     iconName: 'IceCream',
     descriptionEn: 'Cold brewed and espresso-based chilled coffees',
     descriptionKu: 'قاوەی ساردی دروستکراو بە ئیسپریسۆی کواڵتی بەرز',
-    descriptionAr: 'قهوة مثلجة ومحضرة بأجود أنواع الإسبريسو'
+    descriptionAr: 'قهوة باردة ومحضرة بأحسن أنواع الإسبريسو'
   },
   {
     id: 'milkshakes',
@@ -29,7 +29,7 @@ export const CATEGORIES: MenuCategory[] = [
     iconName: 'Milk',
     descriptionEn: 'Creamy decadent milkshakes topped to perfection',
     descriptionKu: 'میڵکشەیکی کرێمی بەلێزەت بە باشترین کواڵتی',
-    descriptionAr: 'ميلك شيك كريمي ولذيذ بأشهى النكهات'
+    descriptionAr: 'ميلك شيك كريمي وثخين بأطيب النكهات'
   },
   {
     id: 'frappuccino',
@@ -39,17 +39,17 @@ export const CATEGORIES: MenuCategory[] = [
     iconName: 'Flame',
     descriptionEn: 'Blended ice coffee beverages with rich flavors and cream',
     descriptionKu: 'قاوەی ئایسی تێکەڵکراو بە خست و کرێم',
-    descriptionAr: 'قهوة مثلجة ممزوجة بالكريمة والنكهات الغنية'
+    descriptionAr: 'قهوة باردة ومخفوقة ويا الكريمة ونكهات طيبة'
   },
   {
     id: 'hot-tea',
     nameEn: 'Hot Tea',
     nameKu: 'چای گەرم',
-    nameAr: 'شاي ساخن',
+    nameAr: 'چاي حار',
     iconName: 'UtensilsCrossed',
     descriptionEn: 'Traditional aromatic black and green leaf teas',
     descriptionKu: 'چای ڕەش و سەوزی ناوچەیی بە بۆنی خۆش',
-    descriptionAr: 'شاي أسود وأخضر عطري وتقليدي'
+    descriptionAr: 'چاي أسود وأخضر خادر ومهيّل على الأصول'
   },
   {
     id: 'freddo',
@@ -59,7 +59,7 @@ export const CATEGORIES: MenuCategory[] = [
     iconName: 'Snowflake',
     descriptionEn: 'Greek style ice-shaken coffee specialties',
     descriptionKu: 'قاوەی فێنکی شەکەنکراوی فرێدۆ',
-    descriptionAr: 'قهوة يونانية مثلجة ومخفوقة'
+    descriptionAr: 'قهوة يونانية باردة ومخفوقة بالثلج'
   },
   {
     id: 'smoothies',
@@ -69,27 +69,27 @@ export const CATEGORIES: MenuCategory[] = [
     iconName: 'GlassWater',
     descriptionEn: 'Fresh blended fruit smoothies with vibrant natural flavors',
     descriptionKu: 'سمۆزی میوەی تازەی دروستکراو بە تام و بۆنی سروشتی',
-    descriptionAr: 'سموذي الفواكه الطازجة بنكهات طبيعية منعشة'
+    descriptionAr: 'سموذي فواكه فريش بنكهات طبيعية ومنعشة'
   },
   {
     id: 'iced-tea',
     nameEn: 'Iced Tea',
     nameKu: 'چای سارد',
-    nameAr: 'شاي مثلج',
+    nameAr: 'چاي بارد',
     iconName: 'CupSoda',
     descriptionEn: 'Refreshing chilled teas infused with fruit extracts',
     descriptionKu: 'چای ساردی بەخشندەی تژى لە تامی میوەکان',
-    descriptionAr: 'شاي بارد ومنعش بنكهات الفواكه الطبيعية'
+    descriptionAr: 'چاي بارد ومنعش ويا نكهات الفواكه الطبيعية'
   },
   {
     id: 'juice',
     nameEn: 'Juice',
     nameKu: 'شەربەت',
-    nameAr: 'عصائر طازجة',
+    nameAr: 'عصائر فريش',
     iconName: 'Citrus',
     descriptionEn: '100% natural cold pressed and handcrafted juices',
     descriptionKu: 'شەربەتی سروشتی و تازەی بەدەست دروستکراو',
-    descriptionAr: 'عصائر طبيعية ١٠٠٪ معصورة ومحضرة طازجة'
+    descriptionAr: 'عصائر طبيعية ١٠٠٪ معصورة ومحضرة فريش'
   },
   {
     id: 'refreshments',
@@ -99,7 +99,7 @@ export const CATEGORIES: MenuCategory[] = [
     iconName: 'Sparkles',
     descriptionEn: 'Handcrafted signature mojitos and sparkling coolers',
     descriptionKu: 'موهێتۆ و خواردنەوە فێنککەرەوە تایبەتەکان',
-    descriptionAr: 'موهيتو مميز ومشروبات فوارة منعشة'
+    descriptionAr: 'موهيتو مميز ومشروبات فوارة تبرد على القلب'
   },
   {
     id: 'cold-drinks',
@@ -109,7 +109,7 @@ export const CATEGORIES: MenuCategory[] = [
     iconName: 'Zap',
     descriptionEn: 'Energy boosters and iced beverage combinations',
     descriptionKu: 'خواردنەوەی وزەبەخش و ژەمە ساردەکان',
-    descriptionAr: 'مشروبات طاقة وتشكيلات منعشة'
+    descriptionAr: 'مشروبات طاقة وتشكيلة باردة ومنعشة'
   }
 ];
 
@@ -132,15 +132,15 @@ export const MENU_ITEMS: MenuItem[] = [
   { id: 'it-5', categoryId: 'iced-tea', nameEn: 'PINEAPPLE', nameKu: 'ئەنەناس', nameAr: 'أناناس', priceAmount: 5000, priceFormatted: '5.000 IQD' },
   { id: 'it-6', categoryId: 'iced-tea', nameEn: 'BLUEBERRY', nameKu: 'بلۆبێری', nameAr: 'توت أزرق', priceAmount: 5000, priceFormatted: '5.000 IQD' },
   { id: 'it-7', categoryId: 'iced-tea', nameEn: 'PASSION FRUIT', nameKu: 'پاشن فرۆست', nameAr: 'باشن فروت', priceAmount: 5000, priceFormatted: '5.000 IQD' },
-  { id: 'it-8', categoryId: 'iced-tea', nameEn: 'ICED CHERRY', nameKu: 'گێلاس', nameAr: 'كرز مثلج', priceAmount: 5000, priceFormatted: '5.000 IQD' },
+  { id: 'it-8', categoryId: 'iced-tea', nameEn: 'ICED CHERRY', nameKu: 'گێلاس', nameAr: 'كرز بارد', priceAmount: 5000, priceFormatted: '5.000 IQD' },
 
   // --- JUICE ---
   { id: 'j-1', categoryId: 'juice', nameEn: 'ORANGE', nameKu: 'پرتقاڵ', nameAr: 'برتقال', priceAmount: 5000, priceFormatted: '5.000 IQD', popular: true },
   { id: 'j-2', categoryId: 'juice', nameEn: 'LEMON', nameKu: 'لیمۆ', nameAr: 'ليمون', priceAmount: 5000, priceFormatted: '5.000 IQD' },
   { id: 'j-3', categoryId: 'juice', nameEn: 'CARROT', nameKu: 'گێزەر', nameAr: 'جزر', priceAmount: 5000, priceFormatted: '5.000 IQD' },
   { id: 'j-4', categoryId: 'juice', nameEn: 'PINEAPPLE', nameKu: 'ئەنەناس', nameAr: 'أناناس', priceAmount: 6000, priceFormatted: '6.000 IQD' },
-  { id: 'j-5', categoryId: 'juice', nameEn: 'BANANA & MILK', nameKu: 'شیر و مۆز', nameAr: 'موز بالحليب', priceAmount: 5000, priceFormatted: '5.000 IQD' },
-  { id: 'j-6', categoryId: 'juice', nameEn: 'MILK & STRAWBERRY', nameKu: 'شیر و فراوڵە', nameAr: 'حليب بالفراولة', priceAmount: 6000, priceFormatted: '6.000 IQD' },
+  { id: 'j-5', categoryId: 'juice', nameEn: 'BANANA & MILK', nameKu: 'شیر و مۆز', nameAr: 'موز وحليب', priceAmount: 5000, priceFormatted: '5.000 IQD' },
+  { id: 'j-6', categoryId: 'juice', nameEn: 'MILK & STRAWBERRY', nameKu: 'شیر و فراوڵە', nameAr: 'حليب وفراولة', priceAmount: 6000, priceFormatted: '6.000 IQD' },
   { id: 'j-7', categoryId: 'juice', nameEn: 'POMEGRANATE', nameKu: 'هەنار', nameAr: 'رمان', priceAmount: 6000, priceFormatted: '6.000 IQD', popular: true },
   { id: 'j-8', categoryId: 'juice', nameEn: 'COCKTAIL', nameKu: 'کۆکتێل', nameAr: 'كوكتيل', priceAmount: 6000, priceFormatted: '6.000 IQD', popular: true },
   { id: 'j-9', categoryId: 'juice', nameEn: 'STRAWBERRY', nameKu: 'فراوڵە', nameAr: 'فراولة', priceAmount: 5000, priceFormatted: '5.000 IQD' },
@@ -193,7 +193,7 @@ export const MENU_ITEMS: MenuItem[] = [
   { id: 'hc-26', categoryId: 'hot-coffee', nameEn: 'CARAMEL MOCHA', nameKu: 'کارامێل مۆکا', nameAr: 'كراميل موكا', priceAmount: 6000, priceFormatted: '6.000 IQD' },
   { id: 'hc-27', categoryId: 'hot-coffee', nameEn: 'MILK AMERICANO', nameKu: 'ئه‌مریکانۆ بە شیر', nameAr: 'أمريكانو بالحليب', priceAmount: 5000, priceFormatted: '5.000 IQD' },
   { id: 'hc-28', categoryId: 'hot-coffee', nameEn: 'FILTER COFFEE', nameKu: 'قاوەی فیلته‌ر', nameAr: 'قهوة فلتر', priceAmount: 6000, priceFormatted: '6.000 IQD' },
-  { id: 'hc-29', categoryId: 'hot-coffee', nameEn: 'MILK', nameKu: 'شیر', nameAr: 'حليب ساخن', priceAmount: 2000, priceFormatted: '2.000 IQD' },
+  { id: 'hc-29', categoryId: 'hot-coffee', nameEn: 'MILK', nameKu: 'شیر', nameAr: 'حليب حار', priceAmount: 2000, priceFormatted: '2.000 IQD' },
 
   // --- ICED COFFEE ---
   { id: 'ic-1', categoryId: 'iced-coffee', nameEn: 'ICED LATTE', nameKu: 'لاتێی', nameAr: 'آيس لاتيه', priceAmount: 6000, priceFormatted: '6.000 IQD', popular: true },
@@ -212,7 +212,7 @@ export const MENU_ITEMS: MenuItem[] = [
   // --- MILKSHAKES ---
   { id: 'm-1', categoryId: 'milkshakes', nameEn: 'VANILLA', nameKu: 'ڤانیلا', nameAr: 'فانيلا', priceAmount: 6500, priceFormatted: '6.500 IQD' },
   { id: 'm-2', categoryId: 'milkshakes', nameEn: 'STRAWBERRY', nameKu: 'فراوڵە', nameAr: 'فراولة', priceAmount: 6500, priceFormatted: '6.500 IQD' },
-  { id: 'm-3', categoryId: 'milkshakes', nameEn: 'CHOCOLATE', nameKu: 'چۆکڵاته', nameAr: 'شوكولاتة', priceAmount: 6500, priceFormatted: '6.500 IQD', popular: true },
+  { id: 'm-3', categoryId: 'milkshakes', nameEn: 'CHOCOLATE', nameKu: 'چۆکڵاته', nameAr: 'شوكولاته', priceAmount: 6500, priceFormatted: '6.500 IQD', popular: true },
   { id: 'm-4', categoryId: 'milkshakes', nameEn: 'CARAMEL', nameKu: 'کارامێل', nameAr: 'كراميل', priceAmount: 6500, priceFormatted: '6.500 IQD' },
   { id: 'm-5', categoryId: 'milkshakes', nameEn: 'LOTUS', nameKu: 'لۆتۆس', nameAr: 'لوتس', priceAmount: 6500, priceFormatted: '6.500 IQD', popular: true },
   { id: 'm-6', categoryId: 'milkshakes', nameEn: 'OREO', nameKu: 'ئۆریۆ', nameAr: 'أوريو', priceAmount: 6500, priceFormatted: '6.500 IQD', popular: true },
@@ -226,8 +226,8 @@ export const MENU_ITEMS: MenuItem[] = [
   { id: 'f-4', categoryId: 'frappuccino', nameEn: 'WHITE MOCHA FRAPPUCCINO', nameKu: 'مۆکای سپی فراپچێنۆ', nameAr: 'وايت موكا فرابتشينو', priceAmount: 7000, priceFormatted: '7.000 IQD', popular: true },
 
   // --- HOT TEA ---
-  { id: 'ht-1', categoryId: 'hot-tea', nameEn: 'BLACK TEA', nameKu: 'چای ڕەش', nameAr: 'شاي أسود', priceAmount: 1000, priceFormatted: '1.000 IQD', popular: true },
-  { id: 'ht-2', categoryId: 'hot-tea', nameEn: 'GREEN TEA', nameKu: 'چای سەوز', nameAr: 'شاي أخضر', priceAmount: 2000, priceFormatted: '2.000 IQD' },
+  { id: 'ht-1', categoryId: 'hot-tea', nameEn: 'BLACK TEA', nameKu: 'چای ڕەش', nameAr: 'چاي أسود', priceAmount: 1000, priceFormatted: '1.000 IQD', popular: true },
+  { id: 'ht-2', categoryId: 'hot-tea', nameEn: 'GREEN TEA', nameKu: 'چای سەوز', nameAr: 'چاي أخضر', priceAmount: 2000, priceFormatted: '2.000 IQD' },
 
   // --- FREDDO ---
   { id: 'fr-1', categoryId: 'freddo', nameEn: 'FREDDO ESPRESSO', nameKu: 'فرێدۆی ئیسپریسۆ', nameAr: 'فريدو إسبريسو', priceAmount: 6000, priceFormatted: '6.000 IQD', popular: true },
